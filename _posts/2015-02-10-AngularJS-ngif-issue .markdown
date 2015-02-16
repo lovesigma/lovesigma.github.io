@@ -40,6 +40,5 @@ dom을 구성할 때 데이터 값 변화에 렌더링을 다시 해줘야하는
 데이터값이 바뀌지 않거나, 데이터값이 바뀌어도 view에 표현이 필요 없는 부분은 bindonce를 사용하여, 성능을 올릴 수 있을 것이다.
 bindonce는 ng지시자에 거의 모든 부분을 커버할수 있는 bindonce에 지시자를 제공해 준다.questions, you can ask them on [Bindonce Github][Bindonce-help].
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
+
 [Bindonce-help]: https://github.com/Pasvaz/bindonce 
