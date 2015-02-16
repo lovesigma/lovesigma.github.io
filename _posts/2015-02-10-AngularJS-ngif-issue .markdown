@@ -15,6 +15,7 @@ ng-if에 가장 큰 특징은 새로운 scope를 형성한다는 것이다.
 다시 말해, angularjs에서 사용자가 만들지 않는 새로운 scope를 만들어 준다는 것이다.
 이것때문에 , 가끔은 원하는 결과를 가져오지 못하는 부분이 생긴다.
 다음 예를 살펴보자.
+{% highlight javascript %}
 <script>
     function main($scope) {
         $scope.testa = false;
@@ -40,6 +41,7 @@ ng-if에 가장 큰 특징은 새로운 scope를 형성한다는 것이다.
         </div>
    </div>
 </div>
+{% endhighlight %}
 여기서 ng-if로 감싸여진 div는 새로운 scope를 만든다.
 즉 ng-if로 싸여진 ng-model에 데이터는 main scope에 데이터가 아니라는 말이다.
 만약 개발자에 의도대로 ng-if에서 main scope데이터로 접근 하고 싶다면, $parent 를 이용해 부모Scope로 접근해야 한다.
