@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ng-if data binding"
+title:  "Angularjs Bindonce [성능이슈]"
 date:   2015-02-10 18:53:36
 categories: jekyll update
 ---
