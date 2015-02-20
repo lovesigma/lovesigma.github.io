@@ -1,7 +1,9 @@
+name: Solar Theme
+url: http://example.org
+description: A stylish blog using the Solarized color palette
+
+permalink: /:year/:month/:day/:title/
+paginate: 10
 pygments: true
-permalink: /otter-pop/:year/:month/:day/:title
-markdown: rdiscount
-exclude: ['.git']
-name: "Otter Pop"
-description: "The world's greated jekyll theme"
-url: http://tybenz.com/otter-pop
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
