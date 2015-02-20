@@ -1,6 +1,6 @@
 # Otter Pop
 
-The world's greatest Jekyll theme.
+The world's greatest Jekyll theme.test
 
 Example: <http://tybenz.com>
 
