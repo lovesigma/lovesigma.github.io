@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "AngularJS ng-ifzz"
+title:  "AngularJS watch count"
 date:   2015-02-10 18:53:36
 categories: jekyll update
 ---
