@@ -6,7 +6,7 @@ categories: jekyll update
 ---
 
 angularJS watch는 개발자에게 손쉬운 개발과 짧은 코드라인을 제공해준다.
-하지만  watch가 많아지고(리스트 일 경우 더더욱) 그에 따라 성능이 저하되는 경우가 생긴다
+하지만  watch가 많아지고(리스트 일 경우 더 더욱) 그에 따라 성능이 저하되는 경우가 생긴다
 전체 watch 갯수를 판단 할 수 있어야하고, 때 에 따라 어디서 watch가 많이 걸려있는지 파악해야한다.
 watch count를 알아내는 방법은 다음과 같다.
 {% highlight javascript %}
