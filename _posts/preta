@@ -1,0 +1,359 @@
+@import "../module/variables";
+@import "../module/mixins";
+.round-border-badge{
+    border-radius: 15px 15px 15px 15px;
+    background: #b3b6c9;
+}
+.bottom-border{
+    border-bottom: solid 1px; //default color
+}
+//color override
+.border-color-cccccc{
+    border-color: $color-gray80;
+}
+.border-color-dedede{
+    border-color: #dedede;
+}
+.border-color-f2f2f2{
+    border-color: #f2f2f2;
+}
+.border-color-b3b6c9{
+    border-color : #B3B6C9;
+}
+
+.horizontal-ul {
+    .horizontal-ul-item {
+        &.active-tab {
+            border-bottom: solid 3px #015aff;
+            color: #015aff;
+        }
+        .item-list-boundary{
+            border-color: $color-gray80
+        }
+    }
+}
+.message{
+    .task-type{
+        background-image: url("/images/ver2/icons.png");
+        background-position: 0px -477px;
+        visibility: visible;
+        margin-top: 1px;
+    }
+}
+.task{
+    .task-type{
+        background-image: url("/images/ver2/icons.png");
+        background-position: -34px -478px;
+        visibility: visible;
+        &.sub-task{
+            background-position: -53px -478px;
+        }
+    }
+}
+//module
+.overtime{
+    .work-flow-badge{
+        &.registered,&.working{
+            background-color : #ff8c0d;
+        }
+    }
+}
+.work-flow-badge{
+
+    border-radius: 3px;
+    &.registered{
+        background-color : #999999;
+
+    }
+    &.working{
+        background-color : #4c7fff;
+
+    }
+    &.closed{
+        background-color : #333333;
+    }
+    &.confirmed{
+        background-color : #333333;
+    }
+    &.completed{
+        background-color : #333333;
+    }
+
+}
+.tahoma-font-10{
+    @include setFont($font-tahoma, 10px);
+}
+.default-font-bold-14{
+    @include setFont($font-nanumgothic-b, 14px);
+}
+.default-font-bold-13{
+    @include setFont($font-nanumgothic-b, 13px);
+}
+.default-font-bold-12{
+    @include setFont($font-nanumgothic-b, 12px);
+}
+.default-font-12{
+    @include setFont($font-nanumgothic, 12px);
+}
+.default-font-11{
+    @include setFont($font-nanumgothic, 11px);
+}
+.default-font-10{
+    @include setFont($font-nanumgothic, 10px);
+}
+.default-font-9{
+    @include setFont($font-nanumgothic, 9px);
+}
+
+.font-color-title{
+    color: #333333;
+}
+.font-color-inner-box{
+    color: #FFFFFF;
+}
+.font-color-dim{
+    color: #B3B6C9;
+}
+.font-color-gray{
+    color: #999999;
+}
+.font-color-point{
+    color: #015aff;
+}
+.font-color-danger{
+    color: #ff0000;
+}
+
+.item-title-font-style{
+    @include setFont($font-nanumgothic, 13px);
+        color: #333333;
+    &.updated{
+        @include setFont($font-nanumgothic-b, 13px);
+    }
+    &.unread{
+        @include setFont($font-nanumgothic-b, 13px);
+        color: #015aff;
+    }
+}
+.overtime {
+    .workflowgroup-user-name{
+        &.registered{
+            color: #ff8c0d;
+        }
+        &.working{
+            color: #ff8c0d;
+        }
+    }
+}
+
+.workflowgroup-user-name{
+    @include setFont($font-nanumgothic, 11px);
+    float: none;
+    line-height: 14px;
+    &.registered{
+        color: #999999;
+        &.overtime{
+            color: #ff8c0d;
+        }
+    }
+    &.working{
+        color: #4c7fff;
+        &.overtime{
+            color: #ff8c0d;
+        }
+    }
+    &.closed{
+        color : #333333;
+        text-decoration: line-through;
+    }
+
+    &.confirmed{
+        color : #333333;
+        text-decoration: line-through;
+    }
+    &.completed{
+        color : #333333;
+        text-decoration: line-through;
+    }
+
+}
+//우선 태스크 리스트만 적용 . 워크플로우가 길면 툭 늘어지는 버그
+.work-flow-user-group-containner{
+    .receiver-list:last-child .after-comma:last-of-type{
+        &:after{
+            content: "";
+        }
+    }
+}
+.work-flow-user-group{
+    &.receiver-list{
+        &:not(:first-child){
+            :before{
+                content: ',';
+            }
+        }
+    }
+}
+.list-item-after-comma:not(:last-child):after{
+    content: ',';
+}
+
+.after-triangle-right:after{
+    content: "\e250";
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    padding: 0 6px;
+    float: right;
+    line-height: 100%;
+    margin-top: 1px;
+}
+.list-item-status-bg{
+    &:hover,&.active{
+        background-color: #f9f9fb;
+        .task-important-icon{
+            background-image: url("/images/ver2/icons.png");
+            background-position: 1px -441px;
+            visibility: visible;
+            &.true{
+                background-position: -35px -441px;
+            }
+        }
+    }
+    &:hover{
+        .new-popup-task-icon{
+            display: inline-block;
+        }
+    }
+    .task-important-icon{
+        &.true{
+            background-image: url("/images/ver2/icons.png");
+            visibility: visible;
+            background-position: -35px -441px;
+        }
+    }
+    &.active{
+        background-color: #f4f4f6;
+    }
+}
+.sort-select.bootstrap-select{
+    width: 80px !important;
+    button{
+        border: 0;
+        background-color: #ffffff !important;
+        padding-top: 3px;
+        @include setFont($font-nanumgothic, 12px);
+        +div{
+            a{
+                font-size: 10px;
+            }
+        }
+    }
+}
+
+.work-flow-user-group:last-child .receiver-list:last-child .after-comma:after{
+    content: "";
+}
+.receiver-list > .after-comma:after{
+    content: ',\00a0';
+}
+.visivility-hidden{
+    visibility:  hidden;
+}
+.attach-file-icon{
+    background-image: url("/images/ver2/icons.png");
+    background-position: 0px -442px;
+}
+.btn {
+    &.show-more-btn {
+        margin-top: -1px;
+        border-width: 1px 0;
+        border-radius: inherit;
+        height: 30px;
+        text-align: left;
+        padding-left: 40px;
+        font-family: 나눔고딕;
+        font-size: 12px;
+        color : #999999;
+        border-color: #f2f2f2;
+        &:after{
+
+            content: '>';
+            padding-left: 7px;
+            font-size: 10px;
+        }
+        &:hover{
+            background-color: #fbfbfb;
+            color: #808080;
+        }
+    }
+}
+.text-center{
+    text-align: center;
+}
+.background-image-icon{
+    background-image: url("/images/ver2/icons.png");
+}
+.active{
+    .next-page-icon{
+        background-position: -134px -280px ;
+    }
+    .last-page-icon{
+        background-position: -153px -280px ;
+    }
+    .prev-page-icon{
+        background-position: -118px -280px ;
+    }
+    .first-page-icon{
+        background-position: -104px -280px ;
+    }
+}
+.next-page-icon{
+    background-position: -134px -248px ;
+    &.active{
+        background-position: -134px -280px ;
+    }
+    &:not(.active){
+        pointer-events: none;
+    }
+}
+.last-page-icon{
+    background-position: -153px -248px ;
+    &.active{
+        background-position: -153px -280px ;
+    }
+    &:not(.active){
+        pointer-events: none;
+    }
+}
+
+.prev-page-icon{
+    background-position: -118px -248px ;
+    &.active{
+        background-position: -118px -280px ;
+    }
+    &:not(.active){
+        pointer-events: none;
+    }
+}
+.first-page-icon{
+    background-position: -104px -248px ;
+    &.active{
+        background-position: -104px -280px ;
+    }
+    &:not(.active){
+        pointer-events: none;
+    }
+
+}
+.new-popup-task-icon{
+    background-position: -69px -210px;
+    display: none;
+}
+//.sort-select{
+//    &.selectpicker + .bootstrap-select{
+//        width: 100px;
+//        button{
+//            border: 0;
+//        }
+//    }
+//}
