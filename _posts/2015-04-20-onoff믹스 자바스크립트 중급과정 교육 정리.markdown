@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "자바스크립트 온오프믹스 중급과정 교육 정"
+title:  "자바스크립트 온오프믹스 중급과정 교육 정리"
 date:   2015-04-06 11:00:36
 categories: javascript
 ---
