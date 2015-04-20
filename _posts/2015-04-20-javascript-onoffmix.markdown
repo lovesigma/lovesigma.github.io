@@ -4,7 +4,7 @@ title:  "자바스크립트 온오프믹스 중급과정 교육 정리"
 date:   2015-04-20 11:00:36
 categories: javascript
 ---
-010 5851 3690
+
 자바스크립트?
  - 객체지향 프로그래밍 언어
 
@@ -98,23 +98,26 @@ Function 오브젝트 생성 *
 	</script>
 		{% endhighlight %}
 	다음 소스에서 
+
 	sports()함수를 호출하면
 	호출되자마자 debgger가 걸리면서
-	브라우저가 디버깅모드로 들어간느데 이시점에서 scope val들을 보면, player swim은 undefinned이지만, sports는 fn이 리턴되었다.
+	브라우저가 디버깅모드로 들어간느데 이시점에서 
+	scope val들을 보면, player swim은 undefinned이지만, 
+	sports는 fn이 리턴되었다.
 	즉 함수를 표현식으로 하지않고, 선언문으로 작성시 무엇보다 먼저 해석되는 것을 알수 있다.
 
 
 엔진 해석 단계 *
-	함수 선언문 해석
-		function sports(){}
-	변수 초기화
-		var sports
-		var member
-	자바스크립트 코드 실행
-		var sports = function(){};
-		var member = 123;
+	- 함수 선언문 해석
+		- function sports(){}
+	- 변수 초기화
+		- var sports
+		- var member
+	- 자바스크립트 코드 실행
+		- var sports = function(){};
+		- var member = 123;
 
-		이것때문에 함수 호이스팅이 가능해짐.
+		- 이것때문에 함수 호이스팅이 가능해짐.
 
 
 
