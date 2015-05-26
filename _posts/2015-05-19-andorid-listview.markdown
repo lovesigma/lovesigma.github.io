@@ -2,7 +2,7 @@
 layout: post
 title:  "Android listview"
 date:   2015-05-19 11:00:36
-categories: javascript 
+categories: Android 
 ---
 - Android ListView
 <br>
