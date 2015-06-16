@@ -13,15 +13,14 @@ listview는 일반적인 목록을 나열할때 많이 쓴다.
 간략하게 말하자면 LinearLayout에 종류가 두가지인데, 하나는 세로로 추가되는 LinearLayout을 
 parent로 넣고 가로로 추가되는 LinearLayout 계속 추가해주는 방식이다.
  - LinearLayout(세로로 추가되는)
- 	- LinearLayout(가로로 추가되는)
- 		- viewComponent
- 		- viewComponent
- 		- viewComponent
-  - LinearLayout(세로로 추가되는)
- 	- LinearLayout(가로로 추가되는)
- 		- viewComponent
- 		- viewComponent
- 		- viewComponent
+   -- LinearLayout(가로로 추가되는)
+ 		--- viewComponent
+ 		--- viewComponent
+ 		--- viewComponent
+ 	-- LinearLayout(가로로 추가되는)
+ 		--- viewComponent
+ 		--- viewComponent
+ 		--- viewComponent
 이런식이다.
 이것을 코드로 나타내면
 
@@ -56,10 +55,10 @@ parent로 넣고 가로로 추가되는 LinearLayout 계속 추가해주는 방�
 또 눈여겨 볼 코드는 view.measure 인데.
 어떤 view에 크기를 알고 싶을때,
 
-
+{% highlight javascript %}
  view.getWidth();
  view.getHeight();
-
+{% endhighlight %}
 
  을 많이쓰는데 해당 방법은 onDraw가 불리지 않았을때는 0을 리턴한다.
  onDraw전에 크기를 알고 싶을때는 
