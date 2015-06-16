@@ -24,7 +24,8 @@ parent로 넣고 가로로 추가되는 LinearLayout 계속 추가해주는 방�
  		- viewComponent
 이런식이다.
 이것을 코드로 나타내면
-{% highlight javascript %}
+
+
     public static void makeMultilineLinearLayout(Context context, LinearLayout parent, List<View> views, int maxWidth){
         parent.removeAllViews();
 
@@ -49,22 +50,26 @@ parent로 넣고 가로로 추가되는 LinearLayout 계속 추가해주는 방�
 
     }
 }
-{% endhighlight %}
+
 과 같은데 
 여기서 받은 인자 3개는 세로로 추가되는 parent linearlayout과 해당 컨텐스트 , 가로 사이즈이다.
 또 눈여겨 볼 코드는 view.measure 인데.
 어떤 view에 크기를 알고 싶을때,
-{% highlight javascript %}
+
+
  view.getWidth();
  view.getHeight();
-{% endhighlight %}
+
+
  을 많이쓰는데 해당 방법은 onDraw가 불리지 않았을때는 0을 리턴한다.
  onDraw전에 크기를 알고 싶을때는 
-{% highlight javascript %}
+
+
  view.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED); 
- view.getMeasuredWidth();
+view.getMeasuredWidth();
  view.getMeasuredHeight();
-{% endhighlight %}
+
+
  다음과 같이 할 수 있다. (measure에 옵션은 추가적으로 더있음.)
 
 
