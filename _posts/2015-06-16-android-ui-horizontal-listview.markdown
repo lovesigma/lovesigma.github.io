@@ -12,15 +12,17 @@ listview는 일반적인 목록을 나열할때 많이 쓴다.
 이럴땐 동적으로 LinearLayout에 view를 추가시켜주는 방법인데,
 간략하게 말하자면 LinearLayout에 종류가 두가지인데, 하나는 세로로 추가되는 LinearLayout을 
 parent로 넣고 가로로 추가되는 LinearLayout 계속 추가해주는 방식이다.
+{% highlight javascript %}
  - LinearLayout(세로로 추가되는)
-   -- LinearLayout(가로로 추가되는)
- 		--- viewComponent
- 		--- viewComponent
- 		--- viewComponent
- 	-- LinearLayout(가로로 추가되는)
- 		--- viewComponent
- 		--- viewComponent
- 		--- viewComponent
+    - LinearLayout(가로로 추가되는)
+ 		viewComponent
+ 		viewComponent
+ 		viewComponent
+    - LinearLayout(가로로 추가되는)
+ 		viewComponent
+ 		viewComponent
+ 		viewComponent
+{% endhighlight %}
 이런식이다.
 이것을 코드로 나타내면
 
