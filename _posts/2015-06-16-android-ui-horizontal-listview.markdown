@@ -24,32 +24,32 @@ parent로 넣고 가로로 추가되는 LinearLayout 계속 추가해주는 방�
 이런식이다.
 이것을 코드로 나타내면
 
+{% highlight javascript %}
+public static void makeMultilineLinearLayout(Context context, LinearLayout parent, List<View> views, int maxWidth){
+    parent.removeAllViews();
 
-    public static void makeMultilineLinearLayout(Context context, LinearLayout parent, List<View> views, int maxWidth){
-        parent.removeAllViews();
+    int tmpMaxWidth = maxWidth;
+    LinearLayout linearLayout = new LinearLayout(context);
+    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+    params.setMargins(0,5,0,5);
+    linearLayout.setLayoutParams(params);
+    parent.addView(linearLayout);
+    for(View view : views){
+        view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
+        tmpMaxWidth = tmpMaxWidth - (view.getMeasuredWidth() + 5); //5 마진
 
-        int tmpMaxWidth = maxWidth;
-        LinearLayout linearLayout = new LinearLayout(context);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.setMargins(0,5,0,5);
-        linearLayout.setLayoutParams(params);
-        parent.addView(linearLayout);
-        for(View view : views){
-            view.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);
-            tmpMaxWidth = tmpMaxWidth - (view.getMeasuredWidth() + 5); //5 마진
-
-            if(tmpMaxWidth <= 0){
-                tmpMaxWidth = maxWidth - (view.getMeasuredWidth() + 5); // 5 마진
-                linearLayout = new LinearLayout(context);
-                linearLayout.setLayoutParams(params);
-                parent.addView(linearLayout);
-            }
-            linearLayout.addView(view);
+        if(tmpMaxWidth <= 0){
+            tmpMaxWidth = maxWidth - (view.getMeasuredWidth() + 5); // 5 마진
+            linearLayout = new LinearLayout(context);
+            linearLayout.setLayoutParams(params);
+            parent.addView(linearLayout);
         }
-
+        linearLayout.addView(view);
     }
+
 }
 
+{% endhighlight %}
 과 같은데 
 여기서 받은 인자 3개는 세로로 추가되는 parent linearlayout과 해당 컨텐스트 , 가로 사이즈이다.
 또 눈여겨 볼 코드는 view.measure 인데.
