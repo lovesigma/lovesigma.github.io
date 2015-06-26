@@ -1,9 +1,16 @@
-name: Solar Theme
-url: http://example.org
-description: A stylish blog using the Solarized color palette
+# Site settings
+title: Polar Bear
+email: 
+description: > # this means to ignore newlines until "baseurl:"
+  Jekyll Theme Demo
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://username.github.io" # the base hostname & protocol for your site
+twitter_username: username
+github_username: username
 
-permalink: /:year/:month/:day/:title/
-paginate: 10
-pygments: true
+# Build settings
+markdown: redcarpet
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
 
-exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+redcarpet:
+  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks"]
