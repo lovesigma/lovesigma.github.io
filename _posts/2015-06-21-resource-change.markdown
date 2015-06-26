@@ -19,6 +19,9 @@ war 파일에 exploded설정에서 Server 탭에 on Update action /on framedeact
 'update classes and resources'를 선택하면 된다.
 그러면 앱이 쉬는동안 자동으로 바뀐내용을 반영 시켜준다.
 
+
+
+
 - CORS문제 쉽게 해결하기
 
 이 방법은 임시적으로 해결할 수 있는 방법이긴 하지만, 테스트 페이지 같은경우에는 아주 유용하게 쓰일수 있을것같다.
