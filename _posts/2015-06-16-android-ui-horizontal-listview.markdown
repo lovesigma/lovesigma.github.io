@@ -71,7 +71,7 @@ view.getMeasuredWidth();
  view.getMeasuredHeight();
 
 
- 다음과 같이 할 수 있다. (measure에 옵션은 추가적으로 더있음.)
+ 위와 같이 할 수 있다. (measure에 옵션은 추가적으로 더있음.)
 
 
 
