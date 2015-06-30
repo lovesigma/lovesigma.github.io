@@ -6,7 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://lovesigma.github.io" # the base hostname & protocol for your site
 twitter_username: lovesigma
 github_username: lovesigma
-permalink: lovesigma/
+permalink: /:title
 # Build settings
 markdown: redcarpet
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
